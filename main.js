@@ -16,52 +16,85 @@ const displayDate = () => {
 
 // Write a JavaScript program to convert a number to a string.
 
+let a = 5;
+let b = '2';
+console.log(a.toString());
+console.log(parseInt(b));
+
 
 
 // Write a JavaScript program to convert a string to the number.
-
-
+  //b was declared above and should be converted to the number 2
+function numberify(string){
+  console.log(parseInt(string));
+}
+numberify(b);
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
-  // * Boolean
-  // * Null
-  // * Undefined
-  // * Number
-  // * NaN
-  // * String
-  
+ let a1 = true; // * Boolean
+ let b1 = null; // * Null
+ let c1 = undefined; // * Undefined
+ let d1 = 5; // * Number
+ let e1 = NaN; // * NaN
+ let f1 = 'hello'; // * String
 
+ const whatsThis = (thing) =>{
+   let answer = typeof(thing);
+   return console.log(answer);
+ }
+ whatsThis("this is a: ", a1);
+ whatsThis("this is a: ", b1);
+ whatsThis("this is a: ", c1);
+ whatsThis("this is a: ", d1);
+ whatsThis("this is a: ", e1);
+ whatsThis("this is a: ", f1);
   
 // Write a JavaScript program that adds 2 numbers together.
+function addThem(num1, num2) {
+  //define variable sum store result of num1 added to num2
+  sum = num1 + num2;
+  console.log("The sume of the two numbers is : " + sum);
+  //log and then return the result
+  return sum;
+}
 
+addThem(3, 4);
+
+console.log("the answer to the addition of 12 and 29 is: "+ addThem(12, 29));
 
 
 // Write a JavaScript program that runs only when 2 things are true.
+let notTrue = false;
+let notTrue2 = false;
+let oneTrue = true;
+let twoTrue = true;
 
+const alsoTruth = (thing1, thing2) =>{
+  if(thing1 === true && thing2 === true){
+    return console.log("Thing1 and Thing2 are true, and this program has run.")
+  };
+};
+alsoTruth(oneTrue, twoTrue);
 
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 
+const semiTruth = (thing1, thing2) => {
+  if(thing1 === true || thing2 === true){
+    return console.log("Thing1 or Thing2 are true, and this program has run.")
+  }
+};
 
+semiTruth(notTrue, oneTrue);
 
 // Write a JavaScript program that runs when both things are not true.  
 
-// ***************************
-//         PART TWO
-// ***************************
-
-// 1. download Live-Server by Ritwick Dey, 
-// 2. reload VS Code, 
-// 3. click the "Go Live" button
-// 4. Go local host 5500 or http://127.0.0.1:5500/index.html to see your web page
-// 5. Or go use the `npm start` command and navigate to localhost:8080 (ctrl + C to close)
-// 6. go to `index.html` 
-// 7. create inputs, buttons and event listeners that render the code blocks you built above to the DOM.
 
 
+const falseRunner = (thing1, thing2) =>{
+  if(thing1 != true && thing2 != true) {
+    console.log("Thing1 and Thing2 are false, and this program has run.")
+  }
+}
 
-
-// Additional Resources
-// Video1: https://player.vimeo.com/video/377147232
-// Video2: https://www.youtube.com/embed/bkvH28PXLWc
-// Video3: https://www.youtube.com/embed/TrGI9Yki-24
+falseRunner(notTrue, notTrue2);
